@@ -1,0 +1,61 @@
+<!-- Why do we say index.html?
+
+Because web servers are set to find this as the default. It can be changed on the server. -->
+
+<!-- Template Via https://getbootstrap.com/docs/4.4/getting-started/introduction/ -->
+
+<!-- Meta with name "viewport" = describes to browser what to do with window content
+when page loads. initial scale 1 = don't zoom anything shrink-to-fit = don't fit
+things to shrink to window, since we take care of that via responsive strategy
+Bootstrap css is a stylesheet, integrity is to ensure it's not crazy CSS. Sha=
+advanced encrypting algorithm it's their base css. Make sure you load your css
+after. applies to google fonts styles as well -->
+<!-- 
+we load javascript at the end of
+the body, why? It loads the content first, and issues with js don't block the
+rest of the content -->
+
+<!-- ATOMIC commits, keep commits small so if something's wrong, you can pinpoint the exact spot -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <title>Bootstrap Grid and Navigation</title>
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
