@@ -17,6 +17,8 @@ rest of the content -->
 
 <!-- ATOMIC commits, keep commits small so if something's wrong, you can pinpoint the exact spot -->
 
+<!-- for grid examples see https://getbootstrap.com/docs/4.4/examples/grid/ -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -38,7 +40,15 @@ rest of the content -->
     <title>Bootstrap Grid and Navigation</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <!-- simple grid structure -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4">Column 1</div>
+        <div class="col col-md-6 col-lg-4">Column 2</div>
+        <div class="col col-md-6 col-lg-4">Column 3</div>
+        <div class="col col-md-6 col-lg-12">Column 4</div>
+      </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
