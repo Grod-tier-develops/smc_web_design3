@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Spartan&display=swap");
+
+body {
+  font-family: "Spartan", sans-serif;
+}
+
 .col-12 {
   text-align: center;
 }
@@ -5,4 +11,10 @@
 img {
   height: 225px;
   width: 100%;
+}
+
+.card:hover {
+  background-color: #ffc107;
+  outline: 4px solid black;
+  transition: all 0.3s;
 }
