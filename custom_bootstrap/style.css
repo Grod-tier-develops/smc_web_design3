@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans|Rubik&display=swap');
+
+/* Colors: #5FBFF9, #306BAC, #98B9F2, #918EF4, #141B41 */
+
+* {
+  font-family: 'PT Sans', sans-serif;
+  color: #141b41;
+}
+
+p {
+  font-family: 'Rubik', sans-serif;
+}
+
+.jumbotron {
+  background-image: url('./assets/spife.jpg');
+  background-size: contain;
+  background-position: right;
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-color: white;
+  border-bottom: 2px solid black;
+}
+
+.jumbotron p {
+  font-size: 2rem;
+}
+
+.bg-dark {
+  background-color: #5fbff9 !important;
+}
+
+.navbar-light {
+  color: #141b41 !important;
+}
+
+.text-primary {
+  color: #5fbff9 !important;
+}
+
+.text-secondary {
+  color: #306bac !important;
+}
+
+.border-primary {
+  border-color: #98b9f2 !important ;
+}
+
+.navbar-brand {
+  color: white !important;
+}
+
+.card-header {
+  background-color: #5fbff9;
+}
+
+.card-body {
+  background-color: #306bac;
+}
+
+.card-title {
+  color: white !important;
+}
+
+.card-text {
+  color: white !important;
+}
+
+.card-img-top {
+  background-color: #306bac;
+  border-radius: 0%;
+}
