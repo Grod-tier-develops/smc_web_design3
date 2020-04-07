@@ -1,6 +1,6 @@
 $(document).ready(function() {
   $('form').hide();
-  // $('input').prop('disabled', true);
+  $('input').prop('disabled', true);
   $('input')
     .first()
     .prop('disabled', false);
@@ -10,9 +10,7 @@ $(document).ready(function() {
 
   $('input').change(function() {
     $('form').addClass('was-validated');
-    $(this)
-      .next()
-      .prop('disabled', false);
+    console.log($(this).next($('input')));
   });
 
   $('#please').click(function() {
