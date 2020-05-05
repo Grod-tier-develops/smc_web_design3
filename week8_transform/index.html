@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* TRANSITION  */
+
+      ul {
+        list-style: none;
+        padding: 10px;
+      }
+
+      nav li {
+        display: inline-block;
+        border-bottom-width: 0px;
+        border-bottom-color: red;
+        border-bottom-style: solid;
+        transition: border-bottom-width 0.5s;
+      }
+
+      nav li:hover {
+        border-bottom-width: 5px;
+      }
+
+      /* TRANSFORM  */
+      .translate div {
+        width: 200px;
+        height: 200px;
+        background-color: rgba(255, 125, 125, 0.3);
+      }
+
+      .translate .original {
+        position: relative;
+      }
+
+      .translate .original p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+      }
+
+      .translate .translated {
+        transform: translate(30px, 20px);
+      }
+
+      .rotate div {
+        width: 200px;
+        height: 200px;
+        background-color: cornsilk;
+      }
+
+      .rotate .rotated {
+        transform: rotateX(410deg);
+      }
+
+      .scale div {
+        background-color: darkgoldenrod;
+        width: 200px;
+        height: 200px;
+      }
+
+      .scale .scaled {
+        transform: scale(120%);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>Home</li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="translate">
+        <div class="original"></div>
+        <div class="translated"></div>
+      </section>
+
+      <section class="rotate">
+        <div class="rotated"></div>
+      </section>
+
+      <section class="scale">
+        <div class="scaled"></div>
+      </section>
+    </main>
+  </body>
+</html>

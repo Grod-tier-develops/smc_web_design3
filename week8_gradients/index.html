@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradients</title>
+    <style>
+      section {
+        width: 100%;
+        height: 400px;
+      }
+
+      #gradient1 {
+        background-color: teal;
+        background-image: linear-gradient(to left, teal 70%, orange);
+      }
+
+      #gradient2 {
+        background-color: steelblue;
+        background-image: linear-gradient(70deg, steelblue 25%, indigo);
+      }
+
+      #gradient3 {
+        background-image: repeating-linear-gradient(
+          160deg,
+          red,
+          orange,
+          yellow,
+          green,
+          blue,
+          indigo,
+          violet 30%
+        );
+      }
+
+      #gradient4 {
+        background-color: lightcoral;
+        background-image: radial-gradient(
+          closest-side at 80% 20%,
+          lightcoral 10%,
+          cornsilk 25%,
+          lightblue 30%
+        );
+      }
+
+      #gradient5 {
+        background-color: cadetblue;
+        background-image: repeating-radial-gradient(
+          circle,
+          cadetblue,
+          cornflowerblue 10%
+        );
+      }
+
+      #gradient6 {
+        position: relative;
+        z-index: 100;
+      }
+
+      div.gradient {
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(
+          to right,
+          cornflowerblue,
+          transparent
+        );
+        z-index: 2;
+        position: absolute;
+      }
+
+      #gradient6 p {
+        position: absolute;
+        bottom: 50%;
+        width: 40%;
+        z-index: 2;
+      }
+
+      img {
+        width: 100%;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="gradient1"></section>
+    <section id="gradient2"></section>
+    <section id="gradient3"></section>
+    <section id="gradient4"></section>
+    <section id="gradient5"></section>
+    <section id="gradient6">
+      <div class="gradient">
+        <img src="./sky.jpg" alt="" />
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam nulla
+          veritatis ex possimus similique consequatur adipisci fuga reiciendis
+          rem, et id incidunt temporibus quae suscipit voluptate, ab ducimus
+          deserunt laboriosam!
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
