@@ -1,0 +1,74 @@
+body {
+  background-color: paleturquoise;
+}
+
+a.navbar-brand:after,
+li:after {
+  display: block;
+  content: '';
+  border-bottom: 2px solid slateblue;
+  transform: scaleX(0);
+  transition: transform 400ms ease-in-out;
+  transform-origin: 0% 50%;
+}
+
+a.navbar-brand:hover:after,
+li:hover:after {
+  transform: scaleX(1);
+}
+
+a.navbar-brand {
+  transition: all 0.2s linear;
+}
+
+.clik {
+  transform: rotate(180deg);
+}
+
+nav {
+  background-image: repeating-linear-gradient(to left, cyan, yellow);
+}
+
+li,
+.navbar-brand {
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+a {
+  color: steelblue !important;
+}
+
+.square {
+  background-color: red;
+  height: 10em;
+  width: 10em;
+  outline: 5px solid black;
+  transition: 0.2s transform ease-in;
+}
+
+.s1 {
+  background-image: url('img/claudio-schwarz-purzlbaum-jcm-YETcAxI-unsplash.jpg');
+  background-size: cover;
+}
+
+.square:hover {
+  transform: scale(3, 3);
+}
+
+.square:active {
+  transform: translateY(400px);
+}
+
+.s2 {
+  background-image: url('img/marcelo-cidrack-dPhocHst32I-unsplash.jpg');
+  background-size: cover;
+}
+.s3 {
+  background-image: url('img/mikita-yo-boWqZA-0RjU-unsplash.jpg');
+  background-size: cover;
+}
+.s4 {
+  background-image: url('img/thomas-langnes-Wl-jXKQjG6o-unsplash.jpg');
+  background-size: cover;
+}
