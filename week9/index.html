@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        animation: colorBody 2.5s;
+      }
+
+      @keyframes colorBody {
+        0% {
+          background-color: hsl(0, 100%, 50%);
+        }
+
+        18% {
+          background-color: hsl(70, 100%, 50%);
+        }
+
+        35% {
+          background-color: hsl(130, 100%, 50%);
+        }
+
+        50% {
+          background-color: hsl(180, 100%, 50%);
+        }
+
+        65% {
+          background-color: hsl(240, 100%, 50%);
+        }
+
+        83% {
+          background-color: hsl(300, 100%, 50%);
+        }
+
+        100% {
+          background-color: hsl(360, 100%, 50%);
+        }
+      }
+
+      .circle {
+        background-color: hsl(0, 100%, 50%);
+        border-radius: 50%;
+        width: 0px;
+        height: 0px;
+        animation: circleAnimate 3s;
+        animation-fill-mode: forwards;
+        animation-delay: 2500ms;
+        position: absolute;
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      @keyframes circleAnimate {
+        from {
+          background-color: hsl(0, 100%, 50%);
+          width: 0vw;
+          height: 0vh;
+        }
+        to {
+          background-color: hsl(360, 100%, 50%);
+          width: max(200vw, 200vh);
+          height: 200vh;
+        }
+      }
+
+      main {
+        width: 960px;
+        margin: 0px auto;
+        opacity: 0;
+        animation: popTheMain 3s;
+        animation-delay: 4s;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes popTheMain {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      main p {
+        columns: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="circle"></div>
+    <section>
+      <div class="strip1"></div>
+      <div class="strip2"></div>
+      <div class="strip3"></div>
+      <div class="strip4"></div>
+    </section>
+
+    <main>
+      <h1>Welkommen to CSS animations</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, aliquid?
+        Optio ad aut dignissimos ipsum pariatur rerum qui similique quasi unde
+        architecto eius, molestiae vel sed voluptas consequatur facilis deserunt
+        quae tempore autem, dolorum totam voluptatem vero. Soluta quis dicta,
+        voluptatibus, ea nostrum maxime laboriosam, unde beatae excepturi
+        molestiae non.
+      </p>
+    </main>
+  </body>
+</html>
