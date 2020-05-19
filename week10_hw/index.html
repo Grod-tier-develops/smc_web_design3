@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas
+      id="myCanvas"
+      width="800"
+      height="600"
+      style="border: 2px solid blue;"
+    >
+      Please use a browser with canvas foo'
+    </canvas>
+
+    <script>
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+
+      //ball variables
+      var ballColor = '#1fc2e1';
+      var colorArray = ['red', 'blue', 'green', 'purple'];
+      var ballPosX = canvas.width / 2;
+      var ballPosY = canvas.height / 2;
+      var ballRadius = 100;
+      var ballSpeedX = 4;
+      var ballSpeedY = 2;
+      var clickCount = 0;
+      var inClick = false;
+      var diminish = 10;
+
+      //color picker variables
+      var firstSquareX = 60;
+      var squaresY = 20;
+      var squareLength = 40;
+
+      var animate = function () {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+
+        for (i = 0; i < colorArray.length; i++) {
+          context.fillStyle = colorArray[i];
+          context.beginPath();
+          context.rect(
+            firstSquareX * (i + 1),
+            squaresY,
+            squareLength,
+            squareLength,
+          );
+          context.fill();
+        }
+
+        context.fillStyle = ballColor;
+        context.beginPath();
+        context.arc(ballPosX, ballPosY, ballRadius, 0, 2 * Math.PI);
+        context.fill();
+        if (
+          ballPosX + ballRadius >= canvas.width ||
+          ballPosX - ballRadius <= 0
+        ) {
+          ballSpeedX *= -1;
+        }
+
+        if (
+          ballPosY + ballRadius >= canvas.height ||
+          ballPosY - ballRadius <= 0
+        ) {
+          ballSpeedY *= -1;
+        }
+
+        ballPosX = ballPosX + ballSpeedX;
+        ballPosY = ballPosY + ballSpeedY;
+
+        if (inClick) {
+          ballRadius -= diminish;
+          if (ballRadius < 20) {
+            diminish *= -1;
+          }
+          if (ballRadius > 100) {
+            ballRadius = 100;
+            diminish = 10;
+            inClick = false;
+          }
+        }
+
+        context.font = '20px Arial';
+        context.fillStyle = 'black';
+        context.fillText('Change the color', firstSquareX, squaresY + 80);
+        context.fillText(
+          'Number of times ball has been clicked: ' + clickCount,
+          firstSquareX,
+          canvas.height - 20,
+        );
+
+        window.requestAnimationFrame(animate);
+      };
+
+      animate();
+
+      canvas.addEventListener('click', function () {
+        var distX = Math.abs(ballPosX - event.offsetX);
+        var distY = Math.abs(ballPosY - event.offsetY);
+
+        if (distX < ballRadius && distY < ballRadius) {
+          console.log('FIRE!!!');
+          inClick = true;
+          console.log(inClick);
+          clickCount++;
+        }
+
+        for (i = 0; i < colorArray.length; i++) {
+          if (
+            event.offsetX > firstSquareX * (i + 1) &&
+            event.offsetX < firstSquareX * (i + 1) + squareLength &&
+            event.offsetY > squaresY &&
+            event.offsetY < squaresY + squareLength
+          ) {
+            ballColor = colorArray[i];
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

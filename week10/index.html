@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="800" height="600">
+      Please use a browser with canvas foo'
+    </canvas>
+
+    <script>
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      var ballColor = '#1fc2e1';
+      var ballPosX = canvas.width / 2;
+      var ballPosY = canvas.height / 2;
+      var ballRadius = 100;
+
+      var ballSpeedX = 3;
+      var ballSpeedY = 2;
+
+      var animate = function () {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.fillStyle = ballColor;
+        context.beginPath();
+        context.arc(ballPosX, ballPosY, ballRadius, 0, 2 * Math.PI);
+        context.fill();
+        if (
+          ballPosX + ballRadius >= canvas.width ||
+          ballPosX - ballRadius <= 0
+        ) {
+          ballSpeedX *= -1;
+        }
+
+        if (
+          ballPosY + ballRadius >= canvas.height ||
+          ballPosY - ballRadius <= 0
+        ) {
+          ballSpeedY *= -1;
+        }
+
+        ballPosX = ballPosX + ballSpeedX;
+        ballPosY = ballPosY + ballSpeedY;
+
+        window.requestAnimationFrame(animate);
+      };
+
+      animate();
+
+      canvas.addEventListener('click', function (e) {
+        var distX = Math.abs(ballPosX - event.offsetX);
+        var distY = Math.abs(ballPosY - event.offsetY);
+
+        if (distX < ballRadius && distY < ballRadius) {
+          console.log('FIRE!!!');
+        }
+      });
+    </script>
+  </body>
+</html>
