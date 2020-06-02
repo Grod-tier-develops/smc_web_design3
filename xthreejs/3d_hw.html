@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://threejs.org/build/three.js"></script>
+
+    <script>
+      // import * as THREE from '../build/three.module.js';
+      // import { AsciiEffect } from './jsm/effects/AsciiEffect.js';
+      // var effect;
+      const renderer = new THREE.WebGLRenderer();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      // effect = new AsciiEffect(renderer, ' .:-+*=%@#', { invert: true });
+
+      // effect.setSize(window.innerWidth, window.innerHeight);
+      // effect.domElement.style.color = 'white';
+      // effect.domElement.style.backgroundColor = 'black';
+      document.body.appendChild(renderer.domElement);
+
+      const camera = new THREE.PerspectiveCamera(70, 2, 0.2, 5);
+      camera.position.z = 2;
+
+      const scene = new THREE.Scene();
+      scene.background = new THREE.Color(21, 300, 93);
+
+      const light = new THREE.DirectionalLight(0xffffff, 1);
+      light.position.set(-1, 2, 4);
+      scene.add(light);
+
+      const deca = new THREE.DodecahedronGeometry(0.3, 0);
+      const material = new THREE.MeshBasicMaterial({
+        color: 0xff2211,
+        wireframe: true,
+      });
+      const depth = new THREE.MeshDepthMaterial({ wireframe: true });
+      const body = new THREE.Mesh(deca, depth);
+
+      const tor = new THREE.TorusGeometry(0.5, 0.2, 8, 6);
+      const body2 = new THREE.Mesh(tor, material);
+      body2.position.x = 1;
+
+      const knot = new THREE.TorusKnotBufferGeometry(0.8, 0.1, 100, 8);
+      const torus = new THREE.Mesh(knot, depth);
+      scene.add(torus);
+
+      scene.add(body2);
+
+      scene.add(body);
+
+      // var loader = new THREE.FontLoader();
+      // loader.load(
+      //   'fonts/PT_Sans_Bold.json',
+      //   function (font) {
+      //     console.log('working?');
+      //     var tgeometry = new THREE.TextGeometry('Poop', {
+      //       font: font,
+      //       size: 80,
+      //       height: 1,
+      //       curveSegments: 12,
+      //       bevelEnabled: true,
+      //       bevelThickness: 10,
+      //       bevelSize: 8,
+      //       bevelOffset: 0,
+      //       bevelSegments: 5,
+      //     });
+      //     const textBody = new THREE.Mesh(tgeometry, material);
+      //     textBody.position.x = -3;
+      //     scene.add(textBody);
+      //   },
+      //   function (xhr) {
+      //     console.log('something?');
+      //   },
+      //   function (err) {
+      //     console.log('error has transpired');
+      //   },
+      // );
+
+      function render(time) {
+        time *= 0.001; //convert to seconds
+
+        body.rotation.x = time;
+        body.rotation.y = time;
+
+        torus.rotation.x = -time;
+        torus.rotation.z = -time;
+
+        body2.position.z = time - 4;
+        body2.rotateZ((Math.PI / 2) * time);
+        renderer.render(scene, camera);
+        requestAnimationFrame(render);
+      }
+      requestAnimationFrame(render);
+    </script>
+  </body>
+</html>
