@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;700&display=swap');
+
+body {
+  background-color: rgb(208, 218, 224);
+  font-family: 'Teko', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color:  rgb(36, 167, 214); !important;
+  margin-top: 5%;
+  font-size: 13vw;
+  margin-bottom:-8%;
+}
+
+.item {
+  
+  background-size: cover;
+  margin-top: 10%;
+  width: 200px;
+  height: 200px;
+  /* outline: 2px solid black; */
+}
+
+.item1 {
+  background-image: url('../img/dye.jpg');
+}
+
+.item2 {
+  background-image: url('../img/bleach_mask.jpg');
+}
+
+.item3 {
+  background-image: url('../img/chrome.jpg');
+}
+
+.item4 {
+  background-image: url('../img/covid_art.jpg');
+}
+
+.item5 {
+  background-image: url("../img/teddy.jpg");
+}
+
+.item6 {
+  background-image: url('../img/post.jpg');
+}
+
+.item7 {
+  background-image: url('../img/hipster_mask.jpg');
+}
+
+.item8 {
+  background-image: url('../img/bleach_hair.jpg');
+}
+
+.item9 {
+  background-image: url('../img/covid_art.jpg');
+}
+.item10 {
+  background-image: url('../img/covid_art.jpg');
+}
+.item11 {
+  background-image: url('../img/covid_art.jpg');
+}
+.item12 {
+  background-image: url('../img/covid_art.jpg');
+}
+
+.item a {
+  line-height: 200px;
+  display: block;
+  color: rgba(0,0,0,0);
+}
+
+.item a {
+  outline: 2px solid black;
+}
+
+.item a:hover {
+  outline:2px solid white ;
+}
+
+.info {
+  font-size: 2rem;
+}
+
+.price {
+  margin-top:-8%;
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 0px) and (max-width: 992px) {
+ .item {
+   margin:0 auto;
+   margin-bottom: 30%;
+   
+ }
+
+ h1 {
+   margin-bottom: 1%;
+ }
+}

@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;700&display=swap');
+
+body {
+  background-color: lightgreen;
+  margin: 0;
+  padding: 0;
+  font-family: 'Teko', sans-serif;
+  font-weight: bold;
+}
+
+#jumbo {
+  background-image: url('../img/chlorox.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 89vh;
+}
+
+#im1 {
+  width: 51vw;
+  height: 50vw;
+  background-image: url('../img/hashtag.jpg');
+  background-size: cover;
+  border: 5px solid black;
+
+  position: relative;
+}
+
+#im1 h2,
+#im2 h2 {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  color: rgb(7, 24, 71);
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 6vw;
+}
+
+#im1 a,
+#im2 a {
+  margin: 0 auto;
+  font-size: 4rem;
+  text-align: center;
+  background-color: rgb(240, 206, 11);
+  border: 0px;
+  color: black;
+  margin-top: 75%;
+  width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#im1 a:hover,
+#im2 a:hover {
+  outline: 2px solid black;
+}
+.square {
+  position: absolute;
+  left: 60%;
+  top: 40%;
+  background-color: rgba(135, 206, 250, 0.8);
+  width: 45%;
+  height: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid black;
+}
+
+#im2 {
+  width: 50vw;
+  height: 50vw;
+  background-image: url('../img/wipes.jpg');
+  background-size: cover;
+  border: 5px solid black;
+}
+
+h1 {
+  font-size: 12vw !important;
+  margin-left: 10vw;
+  width: 40vw;
+  color: rgb(36, 167, 214);
+  margin-bottom: 10vh;
+}
+
+#shopButton {
+  text-align: left;
+  font-size: 30px;
+  width: 30vw;
+  margin-top: -120px;
+
+  margin-left: 11vw;
+  background-color: rgb(240, 206, 11) !important;
+  color: black;
+  border: 0px;
+}
+
+#shopButton:hover {
+  /* background-color: transparent !important; */
+  outline: 2px solid black;
+  /* color: white; */
+}
+
+i {
+  margin-left: -5%;
+  margin-right: 5%;
+  padding: 0;
+}
+
+#tiny-im1,
+#tiny-im2,
+#tiny-im3,
+#tiny-im4 {
+  width: 26vw;
+  height: 26vw;
+  background-size: cover;
+  border: 5px solid black;
+  border-top: 0px solid black;
+}
+
+#tiny-im1 {
+  background-image: url('../img/dye.jpg');
+}
+#tiny-im2 {
+  background-image: url('../img/liberty.jpg');
+}
+#tiny-im3 {
+  background-image: url('../img/neon_bleach.jpg');
+  background-position: center;
+}
+#tiny-im4 {
+  background-image: url('../img/neon_signs.jpg');
+}
+
+.linking {
+}
+
+.linking {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+  font-size: 5vw;
+  line-height: 25vw;
+  border: 0px;
+}
+
+.linking:hover {
+  color: rgb(18, 77, 99);
+  text-decoration: none;
+  border: 0px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 992px) {
+  h1 {
+    font-size: 10rem !important;
+    width: 90vw;
+    color: white;
+  }
+
+  #jumbo {
+    background-position: 70%;
+  }
+
+  #shopButton {
+    width: 70vw;
+  }
+
+  #im1 a,
+  #im2 a {
+    font-size: 1.5rem;
+
+    margin-top: 65%;
+    width: 70%;
+  }
+
+  #im1 {
+    width: 55vw;
+  }
+
+  #im2 {
+  }
+
+  #tiny-im1,
+  #tiny-im2,
+  #tiny-im3,
+  #tiny-im4 {
+    width: 55vw;
+    height: 55vw;
+  }
+
+  .linking {
+    line-height: 54vw;
+  }
+}

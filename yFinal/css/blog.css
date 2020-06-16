@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;700&display=swap');
+
+body {
+  background-color: rgb(208, 218, 224);
+  margin: 0;
+  padding: 0;
+  font-family: 'Teko', sans-serif;
+  /* font-weight: bold; */
+}
+
+img {
+  background-image: url('../img/covid_art.jpg');
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+
+  outline: 2px solid black;
+  display: block;
+  margin: 0 auto;
+}
+
+#im1 {
+  background-image: url('../img/covid_art.jpg');
+}
+#im2 {
+  background-image: url('../img/chrome.jpg');
+}
+#im3 {
+  background-image: url('../img/dye.jpg');
+}
+
+p:first-child {
+  margin-top: 5%;
+}
+
+p {
+  font-size: 1.4rem;
+  margin: 0 10vw;
+  margin-bottom: 3%;
+}
+
+a:hover img {
+  outline: 2px solid white;
+}
+
+iframe {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 5%;
+  outline: 2px solid white;
+  width: 40vw;
+  height: 40vw;
+}
+
+#more {
+  color: rgb(36, 167, 214);
+}
+
+span {
+  color: rgb(36, 167, 214);
+}
+
+h1 {
+  margin-bottom: 3%;
+}
+
+@media screen and (min-width: 0px) and (max-width: 992px) {
+  img {
+    margin-bottom: 10%;
+  }
+
+  iframe {
+    width: 90%;
+    height: 400px;
+  }
+}

@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;700&display=swap');
+
+body {
+  background-color: rgb(208, 218, 224);
+  margin: 0;
+  padding: 0;
+  font-family: 'Teko', sans-serif;
+  /* font-weight: bold; */
+}
+
+#checkout {
+  font-size: 2rem;
+  text-align: left;
+  padding-left: 2rem;
+  color: black;
+  background-color: rgb(240, 206, 11);
+  border: none;
+}
+
+#checkout:hover {
+  outline: 2px solid black;
+}
+
+.card-text {
+  font-size: 1.8rem;
+}
+
+.list-group-item {
+  font-size: 1.4rem;
+  padding-left: 0;
+  font-weight: bold;
+}
+
+.total {
+  font-weight: bolder;
+  font-size: 3rem;
+}
+
+.item {
+  outline: 2px solid black;
+  background-color: white !important;
+}
+
+.item-image {
+  background-image: url('../img/chrome.jpg');
+  /* width: 300px; */
+  width: 300px;
+  height: 200px;
+  background-size: cover;
+  border-right: 2px solid black;
+}
+
+.im1 {
+  background-image: url('../img/dye.jpg');
+}
+
+.im3 {
+  background-image: url('../img/teddy.jpg');
+}
+
+.item-title {
+  color: black;
+}
+
+.price {
+  float: right;
+  font-size: 2rem;
+  color: black;
+}
+
+.vary {
+  font-size: 2rem;
+  margin-top: -1.5rem !important;
+}
+
+.q {
+  font-size: 2rem;
+
+  display: none;
+}
+
+.cancel {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+}
+
+.cancel:hover {
+  color: rgb(240, 206, 11);
+  cursor: pointer;
+}
+
+.cancel:active {
+  color: black;
+}
+
+.formfill {
+  background-color: white !important;
+  padding-bottom: 5%;
+  border-radius: 3px;
+}
+
+.what {
+  display: none;
+}
+
+.formfill input {
+  outline: 2px solid black !important;
+}
+
+label {
+  font-size: 2rem;
+  color: black;
+}
+
+#complete {
+  background-color: rgb(240, 206, 11) !important;
+  margin-top: 5%;
+  color: black !important;
+  font-size: 2rem !important;
+  text-align: left !important;
+  padding-left: 2rem !important;
+  border: none !important;
+}
+
+#complete:hover {
+  outline: 2px solid black;
+}
+
+@media screen and (min-width: 0px) and (max-width: 992px) {
+  .item {
+    display: block;
+    margin: 0 auto;
+    width: 90vw;
+  }
+
+  .item-title {
+    font-size: 2rem;
+  }
+
+  .item-image {
+    width: 100%;
+    background-position: 30%;
+    border-right: none;
+    border-bottom: 2px solid black;
+  }
+
+  .price {
+    float: right;
+  }
+
+  .cancel {
+    font-size: 2rem !important;
+  }
+
+  #complete {
+    text-align: center;
+  }
+
+  #truck {
+    display: block;
+    text-align: center;
+  }
+}

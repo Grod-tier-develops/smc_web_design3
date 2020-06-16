@@ -1,0 +1,60 @@
+.navbar {
+  border-bottom: 5px solid black;
+  background-color: lightskyblue !important;
+  font-weight: bold;
+}
+
+.navbar ul li a {
+  color: black !important;
+  font-size: 2rem;
+}
+
+.navbar ul li.active a {
+  color: rgb(240, 206, 11) !important;
+}
+
+.navbar ul li a:hover {
+  color: white !important;
+  /* outline: 2px solid black; */
+}
+
+.navbar-brand:hover {
+  color: white !important;
+  /* outline: 2px solid black; */
+}
+
+#cartNum {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.navbar-brand {
+  animation-name: flip;
+  animation-delay: 3s;
+  animation-duration: 10s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+@keyframes flip {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  4% {
+    transform: rotate(90deg);
+  }
+  6% {
+    transform: rotate(90deg);
+  }
+
+  10% {
+    transform: rotate(0deg);
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 992px) {
+  #cartNum {
+    margin-right: 10%;
+  }
+}
